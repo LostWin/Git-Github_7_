@@ -1,5 +1,5 @@
 :root {
-  --accent-color: #db4c3f;
+  --accent-color: #4f9dda;
   --gray: #727272;
   --header-height: 44px;
   --header-icon-color: #fff;
@@ -19,11 +19,11 @@
   --form-cancel-hover-fg: #222;
   --form-add-task-bg: #db4c3f;
   --form-add-task-fg: #fff;
-  --form-add-task-hover-bg: #b03d32;
-  --form-add-task-disabled-bg: #f1b7b2;
-  --form-add-task-disabled-fg: #fff;
+  --form-add-task-hover-bg: #6091e6;
+  --form-add-task-disabled-bg: #3684cd;
+  --form-add-task-disabled-fg: #68a1de;
   --dropdown-item-hover-bg: #f3f3f3;
-  --priority-1-icon-color: #d1453b;
+  --priority-1-icon-color: #3bd17f;
   --priority-2-icon-color: #eb8909;
   --priority-3-icon-color: #246fe0;
   --add-project-modal-gray: #ddd;
