@@ -25,7 +25,7 @@
               d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z"
             ></path>
           </svg>
-          <span class="tooltip"> Fermer </span>
+          <span class="tooltip"> Close menu </span>
         </button>
         <button
           class="header-button home-button tab-link"
@@ -66,7 +66,7 @@
               </g>
             </g>
           </svg>
-          <span class="tooltip"> Ajouter une nouvelle tache </span>
+          <span class="tooltip"> Add task </span>
         </button>
         <button class="header-button reset-data-button">
           <svg
@@ -95,7 +95,7 @@
               ></path>
             </g>
           </svg>
-          <span class="tooltip"> Supprimer une tache </span>
+          <span class="tooltip"> Clear data </span>
         </button>
       </div>
     </header>
@@ -107,7 +107,7 @@
               id="task-name-input"
               type="text"
               name="task_name"
-              placeholder="Nom de la tache"
+              placeholder="Task name"
               autocomplete="off"
               maxlength="500"
               autofocus
@@ -115,7 +115,7 @@
             <input
               id="task-description-input"
               type="text"
-              name="ption"
+              name="description"
               placeholder="Description"
               autocomplete="off"
             />
@@ -129,7 +129,7 @@
                 data-is-project-default="true"
               >
                 <option value="inbox" data-is-project-default="true">
-                  Projets
+                  Inbox
                 </option>
               </select>
             </div>
@@ -153,7 +153,7 @@
                     ></path>
                   </svg>
                 </div>
-                <span class="tooltip"> Definir une priorité </span>
+                <span class="tooltip"> Set the priority </span>
               </div>
               <ul class="priority-dropdown-menu">
                 <li>
@@ -173,7 +173,7 @@
                       fill="currentColor"
                     ></path>
                   </svg>
-                  <span>Priorité 1</span>
+                  <span>Priority 1</span>
                 </li>
                 <li>
                   <svg
@@ -192,7 +192,7 @@
                       fill="currentColor"
                     ></path>
                   </svg>
-                  <span>Priorité 2</span>
+                  <span>Priority 2</span>
                 </li>
                 <li>
                   <svg
@@ -211,7 +211,7 @@
                       fill="currentColor"
                     ></path>
                   </svg>
-                  <span>Priorité 3</span>
+                  <span>Priority 3</span>
                 </li>
                 <li class="active-priority">
                   <svg
@@ -230,15 +230,15 @@
                       fill="currentColor"
                     ></path>
                   </svg>
-                  <span>Priorité 4</span>
+                  <span>Priority 4</span>
                 </li>
               </ul>
             </div>
           </div>
           <div class="cancel-submit-container">
-            <button class="cancel-button" type="button">Annuler</button>
+            <button class="cancel-button" type="button">Cancel</button>
             <button class="add-task-submit-button" type="button" disabled>
-              <span>Ajouter une tache</span>
+              Add task
             </button>
           </div>
         </form>
@@ -248,11 +248,11 @@
       <div class="add-project-modal">
         <form id="add-project-form" action="">
           <div class="add-project-modal-header">
-            <h4>Ajouter un projet</h4>
+            <h4>Add project</h4>
           </div>
           <div class="add-project-modal-main">
             <div>
-              <label for="project_name">Nom</label>
+              <label for="project_name">Name</label>
               <input
                 type="text"
                 id="project_name"
@@ -264,9 +264,9 @@
             </div>
           </div>
           <div class="cancel-submit-container">
-            <button class="cancel-button" type="button">Annuler</button>
+            <button class="cancel-button" type="button">Cancel</button>
             <button class="add-project-submit-button" type="button" disabled>
-              Ajouter
+              Add
             </button>
           </div>
         </form>
@@ -299,7 +299,7 @@
                   ></path>
                 </g></svg
               ><span>Reception</span>
-              <span class="tooltip"> Allez dans votre Inbox</span>
+              <span class="tooltip"> Go to Reception</span>
             </button>
           </li>
         </ul>
@@ -316,7 +316,7 @@
                 fill="currentColor"
               ></path>
             </svg>
-            <span>Projets</span>
+            <span>Projects</span>
           </button>
           <button class="add-project-button">
             <svg class="sidebar-add-project-icon" width="13" height="13">
@@ -326,7 +326,7 @@
                 fill-rule="evenodd"
               ></path>
             </svg>
-            <span class="tooltip"> Ajouter un nouveau Projet </span>
+            <span class="tooltip"> Add Project </span>
           </button>
         </div>
         <div class="projects-list-container expanded">
@@ -335,9 +335,7 @@
       </div>
       <div class="editor is-sidebar-visible">
         <div class="tab-heading">
-       
-          <h2 class="tab-title">Reception Personnelle</h2>
-
+          <h2 class="tab-title">Reception</h2>
           <p class="current-date-title"></p>
         </div>
       </div>
