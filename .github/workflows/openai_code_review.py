@@ -8,16 +8,14 @@ def analyze_and_correct_code(file_path):
     with open(file_path, 'r') as file:
         code = file.read()
 
-    # Appel à l'API OpenAI pour analyser et corriger le code
-    response = openai.ChatCompletion.create(
+    # Appel à l'API OpenAI pour analyser et corriger le code (nouvelle API)
+    response = openai.Completion.create(
       model="gpt-4",
-      messages=[
-            {"role": "system", "content": "You are an AI code reviewer. Analyze and suggest corrections for JavaScript code."},
-            {"role": "user", "content": f"Please analyze and correct the following JavaScript code:\n\n{code}"}
-        ]
+      prompt=f"You are an AI code reviewer. Analyze and suggest corrections for JavaScript code:\n\n{code}",
+      max_tokens=2000
     )
 
-    corrected_code = response['choices'][0]['message']['content']
+    corrected_code = response['choices'][0]['text']
 
     # Sauvegarder le code corrigé dans le fichier
     with open(file_path, 'w') as file:
