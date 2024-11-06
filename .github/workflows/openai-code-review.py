@@ -2,7 +2,7 @@ import openai
 import os
 
 # Configuration de la clé API OpenAI
-openai.api_key = os.getenv("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")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def analyze_and_correct_code(file_path):
     with open(file_path, 'r') as file:
