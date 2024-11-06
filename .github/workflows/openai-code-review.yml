@@ -1,0 +1,38 @@
+name: OpenAI Code Review and Correction
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Analyze and Fix Code with OpenAI
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          pip install openai
+          python3 .github/workflows/openai_code_review.py
+
+      - name: Commit and Push Fixes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "OpenAI Auto-fix code issues"
+          git push origin main
+        if: success()
